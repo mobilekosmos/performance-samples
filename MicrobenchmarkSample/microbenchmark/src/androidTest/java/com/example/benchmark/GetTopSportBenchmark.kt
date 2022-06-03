@@ -50,7 +50,6 @@ class GetTopSportBenchmark {
     /*
         With 4 items in list:
         184 ns 1 allocs PROFILED_GetTopSportBenchmark.benchmarkGetTopSportManualIteration
-        185 ns 1 allocs PROFILED_GetTopSportBenchmark.benchmarkGetTopSportManual
         366 ns 4 allocs PROFILED_GetTopSportBenchmark.benchmarkGetTopSportSequence
         386 ns 4 allocs PROFILED_GetTopSportBenchmark.benchmarkGetTopSportAggregated
      */
@@ -58,7 +57,6 @@ class GetTopSportBenchmark {
     /*
         With 32 items in list:
         1,026 ns 1 allocs PROFILED_GetTopSportBenchmark.benchmarkGetTopSportManualIteration
-        996 ns 1 allocs PROFILED_GetTopSportBenchmark.benchmarkGetTopSportManual
         1,627 ns 4 allocs PROFILED_GetTopSportBenchmark.benchmarkGetTopSportSequence
         2,005 ns 4 allocs PROFILED_GetTopSportBenchmark.benchmarkGetTopSportAggregated
     */
@@ -74,13 +72,6 @@ class GetTopSportBenchmark {
     fun benchmarkGetTopSportSequence() {
         benchmarkRule.measureRepeated {
             getTopSportSequence(sportStats)
-        }
-    }
-
-    @Test
-    fun benchmarkGetTopSportManual() {
-        benchmarkRule.measureRepeated {
-            getTopSportManual(sportStats)
         }
     }
 
