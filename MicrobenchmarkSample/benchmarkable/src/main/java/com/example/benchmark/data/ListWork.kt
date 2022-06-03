@@ -19,7 +19,7 @@ fun main() {
 
     printTopSport(getTopSportAggregated(sportStats))
     // Benchmark: 380-402ns and 4 alloc
-    // Problem: this call requires multiple iteration over the list.
+    // Problem: this call iterates twice over the list.
 
     // Alternative 1. Using sequence.
     printTopSport(getTopSportSequence(sportStats))
